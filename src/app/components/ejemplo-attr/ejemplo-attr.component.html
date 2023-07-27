@@ -1,0 +1,28 @@
+<div>
+  <h1>Ejemplo de Directiva de Atributo</h1>
+
+  <p>Sirve para cambiar el color de cualquier componente</p>
+
+  <p>Al pasar el raton se aplica el color, al quitar el raton se quita el color</p>
+
+  <div>
+    <h2>Slecciona el color para subrayar</h2>
+
+    <div>
+      <input type="radio" name="colors" (click)="color='yellow'" />Amarillo
+      <input type="radio" name="colors" (click)="color='lightgreen'" />Verde
+      <input type="radio" name="colors" (click)="color='Cyan'" />Azul
+    </div>
+  </div>
+
+  <!-- Texto para subrayar-->
+  <div>
+    <p [appAttr]="color">
+       Texto para probar la directiva sin default color
+    </p>
+
+    <p [appAttr]="color" defaultColor="violet">
+      Texto para probar la directiva con default Color
+    </p>
+  </div>
+</div>
