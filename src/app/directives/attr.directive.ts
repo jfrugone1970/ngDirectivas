@@ -5,8 +5,8 @@ import { Directive, Input, HostListener, ElementRef } from '@angular/core';
 })
 export class AttrDirective {
 
-  @Input() defaultColor = '';
-  @Input('appAttr') highlightColor = '';
+  @Input() defaultColor: string = '';
+  @Input('appAttr') highlightColor: string = '';
 
 
 
@@ -26,7 +26,7 @@ export class AttrDirective {
 
   private _cambiarColor(color: string | null){
 
-    this._elementref.nativeElement.style.backgoundColor = color;
+    this._elementref.nativeElement.style.backgroundColor = color;
 
   }
 
