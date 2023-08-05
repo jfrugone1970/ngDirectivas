@@ -9,7 +9,6 @@ export class AttrDirective {
   @Input('appAttr') highlightColor: string = '';
 
 
-
   constructor(private _elementref: ElementRef) {
 
 
@@ -29,7 +28,6 @@ export class AttrDirective {
     this._elementref.nativeElement.style.backgroundColor = color;
 
   }
-
 
 
 }

@@ -8,11 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class EjemploAttrComponent implements OnInit {
 
   color: string = '';
+  iscomic: boolean;
 
-  constructor() {}
+  constructor() {
+    this.iscomic = false;
+
+  }
 
   ngOnInit(): void {
 
   }
 
+  cambiarFuente() {
+    this.iscomic = !this.iscomic;
+
+  }
 }

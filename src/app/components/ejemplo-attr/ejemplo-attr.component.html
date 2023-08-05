@@ -11,7 +11,7 @@
     <div>
       <input type="radio" name="colors" (click)="color='yellow'" />Amarillo
       <input type="radio" name="colors" (click)="color='lightgreen'" />Verde
-      <input type="radio" name="colors" (click)="color='Cyan'" />Azul
+      <input type="radio" name="colors" (click)="color='cyan'" />Azul
     </div>
   </div>
 
@@ -25,4 +25,20 @@
       Texto para probar la directiva con default Color
     </p>
   </div>
+
+  <div>
+    <h3>Texto para probar el Tipo de Fuente de una directiva</h3>
+
+    <p [ngStyle]="{'font-family': iscomic ? 'Comic Sans MS' : 'Arial'}">Texto para probar la fuente de una directiva de atributo</p>
+
+
+  </div>
+
+  <button (click)="cambiarFuente()">
+    {{ !iscomic ? 'Comic Sans MS' : 'Arial' }}
+  </button>
+
+
+
+
 </div>
